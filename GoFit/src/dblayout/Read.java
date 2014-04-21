@@ -9,6 +9,7 @@ public class Read {
 	//all the get methods
 	public Read() { }
 	
+	//working on this right now
 	public List<Goal> getAllGoals() {
 		List<Goal> goals = new LinkedList<Goal>();
 		return null;
