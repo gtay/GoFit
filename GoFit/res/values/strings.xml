@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">GoFit</string>
+	<string name="home_text1">Welcome, User!</string>
+	<string name="home_text2">Exercises</string>
+	<string name="home_text3">Workouts</string>
+	<string name="home_text4">Goals</string>
+	<string name="home_text5">Achievements</string>
+	<string name="home_text6">Recent Goal Progress</string>
+	<string name="home_text7">Recent Workouts</string>
+	<string name="goals_text1">Goals</string>
+	<string name="goals_buttontext1">Add New</string>
+	<string name="goals_text2">Lose 10 Pounds</string>
+	<string name="goals_text3">Deadline: 05/23/14</string>
+	<string name="goals_text4">Goal: Bench 160lbs.</string>
+	<string name="goals_text5">Deadline: 05/29/14</string>
+	<string name="goals_text6">Goal: Run 7 minute mile</string>
+	<string name="goals_text7">Deadline: 09/20/14</string>
+	<string name="ex_text1">Exercises</string>
+	<string name="ex_text2">Bicep</string>
+	<string name="ex_text3">Name</string>
+	<string name="ex_text4">Weight</string>
+	<string name="ex_buttontext1">Add New</string>
+	<string name="ex_text5">Sets</string>
+	<string name="ex_text6">Reps</string>
+	<string name="ex_text7">Updated</string>	
+</resources>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- home.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingLeft="7dp"
+    android:paddingRight="7dp"
+    android:paddingTop="7dp" >
+
+    <TextView
+        android:id="@+id/ex_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:text="@string/app_name"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:paddingTop="40dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/ex_text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.95"
+            android:ems="10"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:text="@string/ex_text1"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/ex_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ex_buttontext1"
+              />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ex_text2"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:text="@string/ex_text2"
+        android:textSize="20sp"
+          />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="7dp"
+        android:paddingLeft="7dp" >
+
+        <TableRow
+            android:id="@+id/home_tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/ex_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/ex_text3"
+                android:textSize="13sp"
+                  />
+
+            <TextView
+                android:id="@+id/ex_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/ex_text4"
+                android:textSize="13sp"
+                  />
+
+            <TextView
+                android:id="@+id/ex_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/ex_text5"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/ex_text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/ex_text6"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/ex_text7"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/ex_text7"
+                android:textSize="13sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Dumbbell Curls"
+                android:textSize="13sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="30lbs."
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds,HardcodedText" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="3"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds,HardcodedText" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="8"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds,HardcodedText" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="03/03/14"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds,HardcodedText" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Barbell Curls"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds,HardcodedText" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="40lbs."
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds,HardcodedText" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="3"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds,HardcodedText" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="8"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="03/03/14"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:text="Chest"
+        android:textSize="20sp"
+        tools:ignore="DuplicateIds" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="7dp"
+        android:paddingLeft="7dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Name"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Weight"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Sets"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Reps"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Updated"
+                android:textSize="13sp"
+                tools:ignore="DuplicateIds" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="DuplicateIds" >
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Bench Press"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="150lbs."
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="5"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="5"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="03/03/14"
+                android:textSize="13sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="DuplicateIds" >
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="Dumbbell Fly"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="30lbs."
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="3"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="8"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingTop="3dp"
+                android:text="03/03/14"
+                android:textSize="13sp" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

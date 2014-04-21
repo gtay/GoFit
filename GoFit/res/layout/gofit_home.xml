@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- home.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingRight="7dp"
+    android:paddingLeft="7dp"
+    android:paddingTop="7dp" >
+
+    <TextView
+        android:id="@+id/home_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:text="@string/app_name"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:paddingTop="40dp" />
+
+    <TextView
+        android:id="@+id/home_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:text="@string/home_text1"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="15dp" >
+
+        <Button
+            android:id="@+id/home_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.13"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="@string/home_text2" />
+
+        <Button
+            android:id="@+id/home_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="@string/home_text3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="5dp" >
+
+        <Button
+            android:id="@+id/home_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="@string/home_text4" />
+
+        <Button
+            android:id="@+id/home_button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.08"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="@string/home_text5" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/home_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:paddingTop="25dp"
+        android:text="@string/home_text6"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="5dp" />
+    
+   	<ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="10dp" />
+        
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="10dp" />
+    
+    <TextView
+        android:id="@+id/home_text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="25dp"
+        android:text="@string/home_text7"
+        android:textSize="20sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/home_tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+           	<Button
+	            android:id="@+id/example_button4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.15"
+	            android:paddingLeft="7dp"
+	            android:paddingRight="7dp"
+	            android:text="" />
+           	
+           	<Button
+	            android:id="@+id/example_button5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.15"
+	            android:paddingLeft="7dp"
+	            android:paddingRight="7dp"
+	            android:text="" />
+           	
+           	<Button
+	            android:id="@+id/example_button6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.15"
+	            android:paddingLeft="7dp"
+	            android:paddingRight="7dp"
+	            android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/home_tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+           	
+            <Button
+	            android:id="@+id/example_button1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.15"
+	            android:paddingLeft="7dp"
+	            android:paddingRight="7dp"
+	            android:text="" />
+           	
+           	<Button
+	            android:id="@+id/example_button2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.15"
+	            android:paddingLeft="7dp"
+	            android:paddingRight="7dp"
+	            android:text="" />
+           	
+           	<Button
+	            android:id="@+id/example_button3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.15"
+	            android:paddingLeft="7dp"
+	            android:paddingRight="7dp"
+	            android:text="" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
