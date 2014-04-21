@@ -1,5 +1,5 @@
 package dblayout;
 
-public class Delete {
+public class Delete extends DatabaseConnector {
 
 }
