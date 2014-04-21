@@ -73,8 +73,10 @@ public abstract class DatabaseConnector {
 
 	      @Override
 	      public void onUpgrade(SQLiteDatabase db, int oldVersion, 
-	          int newVersion) 
-	      {
+	          int newVersion) {
+	    	  //drop older table if existed
+	    	  db.execSQL("DROP TABLE IF EXISTS GoFit");
+	    	  this.onCreate(db);
 	      } // end method onUpgrade
 	   } // end class DatabaseOpenHelper
 }
