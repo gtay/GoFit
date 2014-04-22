@@ -1,5 +1,6 @@
 package com.cmu.gofit;
 
+import entities.Achievement;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -52,7 +53,7 @@ public class Home extends Activity {
 	OnClickListener achievementsClicked = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			Intent intent = new Intent(Home.this, Achievements.class);
+			Intent intent = new Intent(Home.this, Achievement.class);
 			startActivity(intent);
 		}
 	};
