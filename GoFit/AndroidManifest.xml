@@ -14,13 +14,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.cmu.gofit.Workout"
+        <activity android:name="com.cmu.gofit.Workouts"
          	android:label="@string/app_name">
         </activity>
-        <activity android:name="com.cmu.gofit.Exercise"
+        <activity android:name="com.cmu.gofit.Exercises"
          	android:label="@string/app_name">
         </activity>
-        <activity android:name="com.cmu.gofit.Goal"
+        <activity android:name="com.cmu.gofit.Goals"
          	android:label="@string/app_name">
         </activity>
         </application>
