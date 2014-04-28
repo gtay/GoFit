@@ -2,6 +2,7 @@ package entities;
 
 public class Workout {
 	private int goal_id;
+	private int id;
 	private String date;
 	private String details;
 	private String image_path;
@@ -9,6 +10,10 @@ public class Workout {
 	
 	public int getGoalId() {
 		return goal_id;
+	}
+	
+	public int getID() {
+		return id;
 	}
 	
 	public String getDate() {
@@ -45,5 +50,9 @@ public class Workout {
 	
 	public void setAudioPath(String audio_file) {
 		this.audio_file = audio_file;
+	}
+	
+	public void setID(int id) {
+		this.id = id;
 	}
 }

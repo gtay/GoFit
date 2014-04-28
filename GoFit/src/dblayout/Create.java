@@ -3,7 +3,7 @@ package dblayout;
 import android.content.Context;
 
 public class Create extends DatabaseConnector {
-	public Create() { } //empty constrcutor
+	public Create() { } //empty constructor
 	
 	public Create(Context context) {
 		// create a new DatabaseOpenHelper
