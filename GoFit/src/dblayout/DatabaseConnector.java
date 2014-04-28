@@ -62,7 +62,8 @@ public abstract class DatabaseConnector {
 	 	            "image_path TEXT, audio_file TEXT);";
 	         
 	         String createAchievement = "CREATE TABLE " + ACHIEVE_TABLE +
-	 	            " (num_completed integer, fastest_time TEXT);";
+	        		 " (_id integer primary key autoincrement," +
+	 	            "num_completed TEXT, fastest_time TEXT);";
 	         
 	         String createExercise = "CREATE TABLE " + EXERCISE_TABLE +
 	 	            " (_id integer primary key autoincrement," +
