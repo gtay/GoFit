@@ -32,4 +32,10 @@
 	<string name="reg_text7">Height:</string>
 	<string name="reg_text9">Weight:</string>
 	<string name="reg_buttontext">Submit</string>
+	<string name="exf_descrp">Add New Exercise</string>
+	<string name="exf_text3">Name:</string>
+	<string name="exf_text5">Weight:</string>
+	<string name="exf_text7">Sets:</string>
+	<string name="exf_text9">Reps:</string>
+	<string name="exf_button1">Submit</string>
 </resources>

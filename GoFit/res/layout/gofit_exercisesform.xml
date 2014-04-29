@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- gofit_registration.xml -->
+<!-- gofit_exercisesform.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
@@ -11,7 +11,7 @@
     android:paddingTop="7dp" >
 
     <TextView
-        android:id="@+id/reg_text1"
+        android:id="@+id/exf_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,14 +27,14 @@
         android:paddingTop="40dp" />
 
     <TextView
-        android:id="@+id/reg_text2"
+        android:id="@+id/exf_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:paddingLeft="10dp"
         android:paddingTop="15dp"
-        android:text="@string/reg_descrp"
-        android:textSize="15sp" />
+        android:text="@string/exf_descrp"
+        android:textSize="20sp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -47,16 +47,16 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/reg_text3"
+                android:id="@+id/exf_text3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:paddingTop="15dp"
-                android:text="@string/reg_text3"
+                android:text="@string/exf_text3"
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/reg_text4"
+                android:id="@+id/exf_text4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -70,16 +70,16 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/reg_text5"
+                android:id="@+id/exf_text5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:paddingTop="15dp"
-                android:text="@string/reg_text5"
+                android:text="@string/exf_text5"
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/reg_text6"
+                android:id="@+id/exf_text6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -93,16 +93,16 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/reg_text7"
+                android:id="@+id/exf_text7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:paddingTop="15dp"
-                android:text="@string/reg_text7"
+                android:text="@string/exf_text7"
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/reg_text8"
+                android:id="@+id/exf_text8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -116,16 +116,16 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/reg_text9"
+                android:id="@+id/exf_text9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:paddingTop="15dp"
-                android:text="@string/reg_text9"
+                android:text="@string/exf_text9"
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/reg_text10"
+                android:id="@+id/exf_text10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -141,10 +141,10 @@
         android:paddingTop="20dp" >
 
         <Button
-            android:id="@+id/reg_submitbutton"
+            android:id="@+id/exf_button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/reg_buttontext" />
+            android:text="@string/exf_button1" />
     </LinearLayout>
 
 </LinearLayout>
