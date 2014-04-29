@@ -50,6 +50,7 @@ public class ExercisesForm extends Activity {
 			
 			Intent intent = new Intent(ExercisesForm.this, Exercises.class);
 			startActivity(intent);
+			finish();
 		}
 	};
 

@@ -34,6 +34,7 @@ public class Registration extends Activity {
 		if (!u.getName().equals("name")) {
 			Intent intent = new Intent(Registration.this, Home.class);
 			startActivity(intent);
+			finish();
 		// prompt user for their information
 		} else {
 			Button submitButton = (Button) findViewById(R.id.reg_submitbutton);
@@ -65,6 +66,7 @@ public class Registration extends Activity {
 			
 			Intent intent = new Intent(Registration.this, Home.class);
 			startActivity(intent);
+			finish();
 		}
 	};
 }
