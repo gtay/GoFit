@@ -62,7 +62,9 @@ public class Update extends DatabaseConnector {
 		
 		ContentValues values = new ContentValues();
 		values.put("name", exercise.getName());
-		values.put("details", exercise.getDetails());
+		values.put("weight", exercise.getWeight());
+		values.put("sets", exercise.getSets());
+		values.put("reps", exercise.getReps());
 		
 		database.update(EXERCISE_TABLE, values, "_id="+exercise.getID(), null);
 		close();

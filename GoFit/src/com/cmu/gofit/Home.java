@@ -27,7 +27,7 @@ public class Home extends Activity {
 		goalsButton.setOnClickListener(goalsClicked);		
 		Button achievementsButton = (Button) findViewById(R.id.home_button4);
 		achievementsButton.setOnClickListener(achievementsClicked);
-		
+
 		Read dbRead = new Read();
 		User u = dbRead.getUser();
 		String userName = u.getName();

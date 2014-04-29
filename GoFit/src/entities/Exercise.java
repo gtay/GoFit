@@ -3,7 +3,9 @@ package entities;
 public class Exercise {
 	private int id;
 	private String name;
-	private String details;
+	private int weight;
+	private int sets;
+	private int reps;
 	
 	public int getID() {
 		return id;
@@ -13,16 +15,32 @@ public class Exercise {
 		return name;
 	}
 	
-	public String getDetails() {
-		return details;
+	public int getWeight() {
+		return weight;
+	}
+	
+	public int getSets() {
+		return sets;
+	}
+	
+	public int getReps() {
+		return reps;
 	}
 	
 	public void setName(String name) {
 		this.name = name;
 	}
 	
-	public void setDetails(String details) {
-		this.details = details;
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+	
+	public void setSets(int sets) {
+		this.sets = sets;
+	}
+	
+	public void setReps(int reps) {
+		this.reps = reps;
 	}
 	
 	public void setID(int id) {

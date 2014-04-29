@@ -48,7 +48,9 @@ public class Insert extends DatabaseConnector {
 		
 		ContentValues values = new ContentValues();
 		values.put("name", exercise.getName());
-		values.put("details", exercise.getDetails());
+		values.put("weight", exercise.getWeight());
+		values.put("sets", exercise.getSets());
+		values.put("reps", exercise.getReps());
 		
 		database.insert(EXERCISE_TABLE, null, values);
 		close();

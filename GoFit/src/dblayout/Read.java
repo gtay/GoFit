@@ -95,10 +95,14 @@ public class Read extends DatabaseConnector {
 				exercise = new Exercise();
 				int id = cursor.getColumnIndex("_id");
 				int name = cursor.getColumnIndex("name");
-		        int details = cursor.getColumnIndex("details");
+		        int weight = cursor.getColumnIndex("weight");
+		        int sets = cursor.getColumnIndex("sets");
+		        int reps = cursor.getColumnIndex("reps");
 		        exercise.setID(Integer.parseInt(cursor.getString(id)));
 				exercise.setName(cursor.getString(name));
-				exercise.setDetails(cursor.getString(details));
+				exercise.setWeight(cursor.getInt(weight));
+				exercise.setSets(cursor.getInt(sets));
+				exercise.setReps(cursor.getInt(reps));
 		        
 				//add to list
 				exercises.add(exercise);
@@ -208,10 +212,14 @@ public class Read extends DatabaseConnector {
 		
 		Exercise exercise = new Exercise();
 		int name = cursor.getColumnIndex("name");
-        int details = cursor.getColumnIndex("details");
+        int weight = cursor.getColumnIndex("weight");
+        int sets = cursor.getColumnIndex("sets");
+        int reps = cursor.getColumnIndex("reps");
         exercise.setID(id);
 		exercise.setName(cursor.getString(name));
-		exercise.setDetails(cursor.getString(details));
+		exercise.setWeight(cursor.getInt(weight));
+		exercise.setSets(cursor.getInt(sets));
+		exercise.setReps(cursor.getInt(reps));
 		
 		//for debugging
 		Log.d("getExercise("+id+")", exercise.toString());
