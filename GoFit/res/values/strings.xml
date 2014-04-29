@@ -23,5 +23,14 @@
 	<string name="ex_buttontext1">Add New</string>
 	<string name="ex_text5">Sets</string>
 	<string name="ex_text6">Reps</string>
-	<string name="ex_text7">Updated</string>	
+	<string name="ex_text7">Updated</string>
+	<string name="reg_descrp">Welcome to GoFit! 
+	    Before we begin, please complete some information 
+	    some information about yourself!
+    </string>
+	<string name="reg_text3">Name:</string>	
+	<string name="reg_text5">Age:</string>
+	<string name="reg_text7">Height:</string>
+	<string name="reg_text9">Weight:</string>
+	<string name="reg_buttontext">Submit</string>
 </resources>

@@ -1,12 +1,15 @@
 package com.cmu.gofit;
 
-import entities.Achievement;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
+import dblayout.Read;
+import entities.Achievement;
+import entities.User;
 
 public class Home extends Activity {
 	
@@ -24,6 +27,12 @@ public class Home extends Activity {
 		goalsButton.setOnClickListener(goalsClicked);		
 		Button achievementsButton = (Button) findViewById(R.id.home_button4);
 		achievementsButton.setOnClickListener(achievementsClicked);
+		
+		Read dbRead = new Read();
+		User u = dbRead.getUser();
+		String userName = u.getName();
+		TextView welcomeMessage = (TextView) findViewById(R.id.home_text1);
+		welcomeMessage.setText("Welcome, "+userName+"!");
 	}
 	
 	OnClickListener exercisesClicked = new OnClickListener() {

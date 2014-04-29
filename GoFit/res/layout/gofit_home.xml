@@ -72,7 +72,7 @@
             android:id="@+id/home_button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.15"
+            android:layout_weight="0.16"
             android:paddingLeft="7dp"
             android:paddingRight="7dp"
             android:text="@string/home_text4" />
@@ -81,7 +81,7 @@
             android:id="@+id/home_button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.08"
+            android:layout_weight="0.13"
             android:paddingLeft="7dp"
             android:paddingRight="7dp"
             android:text="@string/home_text5" />

@@ -22,7 +22,7 @@ public class Create extends DatabaseConnector {
 	    ContentValues achieve_values = new ContentValues();
 	    achieve_values.put("num_completed", "0");
 	    achieve_values.put("fastest_time", "None");
-	    database.insert(USER_TABLE, null, achieve_values);
+	    database.insert(ACHIEVE_TABLE, null, achieve_values);
 	    
 	    close();
 	} // end Create

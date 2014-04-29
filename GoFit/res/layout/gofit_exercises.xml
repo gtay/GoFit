@@ -127,54 +127,54 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="Dumbbell Curls"
                 android:textSize="13sp"
-                tools:ignore="HardcodedText" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="30lbs."
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds,HardcodedText" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="3"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds,HardcodedText" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="8"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds,HardcodedText" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text12"
                 android:layout_width="186dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="03/03/14"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds,HardcodedText" />
+                  />
 
         </TableRow>
 
@@ -184,60 +184,60 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="Barbell Curls"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds,HardcodedText" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="40lbs."
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds,HardcodedText" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="3"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds,HardcodedText" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="8"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text17"
                 android:layout_width="186dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
                 android:text="03/03/14"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds" />
+                  />
 
         </TableRow>
     </TableLayout>
 
     <TextView
-        android:id="@+id/editText3"
+        android:id="@+id/ex_text18"
         android:layout_width="186dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -245,7 +245,7 @@
         android:paddingTop="15dp"
         android:text="Chest"
         android:textSize="20sp"
-        tools:ignore="DuplicateIds" />
+          />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -260,54 +260,54 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
-                android:text="Name"
+                android:text="@string/ex_text3"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
-                android:text="Weight"
+                android:text="@string/ex_text4"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
-                android:text="Sets"
+                android:text="@string/ex_text5"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
-                android:text="Reps"
+                android:text="@string/ex_text6"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds" />
+                  />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text23"
                 android:layout_width="186dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
                 android:paddingTop="3dp"
-                android:text="Updated"
+                android:text="@string/ex_text7"
                 android:textSize="13sp"
-                tools:ignore="DuplicateIds" />
+                  />
 
         </TableRow>
 
@@ -315,10 +315,10 @@
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:ignore="DuplicateIds" >
+              >
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -327,7 +327,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -336,7 +336,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -345,7 +345,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -354,7 +354,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text28"
                 android:layout_width="186dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -367,10 +367,10 @@
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:ignore="DuplicateIds" >
+              >
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -379,7 +379,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -388,7 +388,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -397,7 +397,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
@@ -406,7 +406,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/editText3"
+                android:id="@+id/ex_text33"
                 android:layout_width="186dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="3dp"
