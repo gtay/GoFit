@@ -1,9 +1,14 @@
 package entities;
 
 public class Goal {
+	private int id;
 	private String name;
 	private String end_date;
 	private String progress;
+	
+	public int getID() {
+		return id;
+	}
 	
 	public String getName() {
 		return name;
@@ -27,5 +32,9 @@ public class Goal {
 	
 	public void setProgress(String progress) {
 		this.progress = progress;
+	}
+	
+	public void setID(int id) {
+		this.id = id;
 	}
 }

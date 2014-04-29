@@ -10,6 +10,11 @@ public abstract class DatabaseConnector {
 
 	 // database name
 	   protected static final String DATABASE_NAME = "GoFit";
+	   protected static final String USER_TABLE = "user";
+	   protected static final String GOAL_TABLE = "goal";
+	   protected static final String WORK_TABLE = "workout";
+	   protected static final String ACHIEVE_TABLE = "achievement";
+	   protected static final String EXERCISE_TABLE = "exercise";
 	   protected static SQLiteDatabase database; // database object
 	   protected static DatabaseOpenHelper databaseOpenHelper; // database helper
 	   
@@ -41,26 +46,27 @@ public abstract class DatabaseConnector {
 	      public void onCreate(SQLiteDatabase db) 
 	      {
 	         // query to create a new table named user
-	         String createUser = "CREATE TABLE user" +
-	            "(_id integer primary key autoincrement," +
+	         String createUser = "CREATE TABLE " + USER_TABLE +
+	            " (_id integer primary key autoincrement," +
 	            "name TEXT, age TEXT, height TEXT," +
 	            "weight TEXT);";
 	         
-	         String createGoal = "CREATE TABLE goal" +
-	 	            "(_id integer primary key autoincrement," +
+	         String createGoal = "CREATE TABLE " + GOAL_TABLE + 
+	 	            " (_id integer primary key autoincrement," +
 	 	            "name TEXT, end_date TEXT, progress TEXT);";
 	         
 	         //have to figure out how to get paths
-	         String createWorkout = "CREATE TABLE workout" +
-	 	            "(_id integer primary key autoincrement," +
+	         String createWorkout = "CREATE TABLE " + WORK_TABLE + 
+	 	            " (_id integer primary key autoincrement," +
 	 	            "goal_id integer, date TEXT, details TEXT," +
 	 	            "image_path TEXT, audio_file TEXT);";
 	         
-	         String createAchievement = "CREATE TABLE achievement" +
-	 	            "(num_completed integer, fastest_time TEXT);";
+	         String createAchievement = "CREATE TABLE " + ACHIEVE_TABLE +
+	        		 " (_id integer primary key autoincrement," +
+	 	            "num_completed TEXT, fastest_time TEXT);";
 	         
-	         String createExercise = "CREATE TABLE exercise" +
-	 	            "(_id integer primary key autoincrement," +
+	         String createExercise = "CREATE TABLE " + EXERCISE_TABLE +
+	 	            " (_id integer primary key autoincrement," +
 	 	            "name TEXT, details TEXT);";
 	         
 	         db.execSQL(createUser);
@@ -75,7 +81,7 @@ public abstract class DatabaseConnector {
 	      public void onUpgrade(SQLiteDatabase db, int oldVersion, 
 	          int newVersion) {
 	    	  //drop older table if existed
-	    	  db.execSQL("DROP TABLE IF EXISTS GoFit");
+	    	  db.execSQL("DROP TABLE IF EXISTS " + DATABASE_NAME);
 	    	  this.onCreate(db);
 	      } // end method onUpgrade
 	   } // end class DatabaseOpenHelper
