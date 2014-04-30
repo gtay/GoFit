@@ -67,7 +67,7 @@ public abstract class DatabaseConnector {
 	         
 	         String createExercise = "CREATE TABLE " + EXERCISE_TABLE +
 	 	            " (_id integer primary key autoincrement," +
-	 	            "name TEXT, weight INTEGER, sets INTEGER" +
+	 	            "name TEXT, weight INTEGER, sets INTEGER," +
 	 	            "reps INTEGER);";
 	         
 	         db.execSQL(createUser);

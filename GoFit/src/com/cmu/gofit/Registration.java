@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import dblayout.Create;
 import dblayout.Read;
 import dblayout.Update;
@@ -18,6 +19,7 @@ public class Registration extends Activity {
 	private EditText ageEditText;
 	private EditText heightEditText;
 	private EditText weightEditText;
+	private Toast mToast;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -37,6 +39,7 @@ public class Registration extends Activity {
 			finish();
 		// prompt user for their information
 		} else {
+			mToast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
 			Button submitButton = (Button) findViewById(R.id.reg_submitbutton);
 			submitButton.setOnClickListener(submitClicked);
 			nameEditText = (EditText) findViewById(R.id.reg_text4);
@@ -54,19 +57,30 @@ public class Registration extends Activity {
 			String height = heightEditText.getText().toString();
 			String weight = weightEditText.getText().toString();
 			
-			// add new user to database
-			Update dbUpdate = new Update();
-			User newUser = new User();
-			newUser.setName(name);
-			newUser.setAge(age);
-			newUser.setHeight(height);
-			newUser.setWeight(weight);
+			// check for empty field
+			if (name.length() == 0 || age.length() == 0 ||
+					weight.length() == 0 || height.length() == 0) {
+				// first cancel previous toast message to prevent queue buildup
+				mToast.cancel();
+			    mToast = Toast.makeText(getApplicationContext(), 
+			    		"Form is incomplete!", Toast.LENGTH_SHORT);
+			    mToast.show();
+			} else {
 			
-			dbUpdate.updateUser(newUser);
-			
-			Intent intent = new Intent(Registration.this, Home.class);
-			startActivity(intent);
-			finish();
+				// add new user to database
+				Update dbUpdate = new Update();
+				User newUser = new User();
+				newUser.setName(name);
+				newUser.setAge(age);
+				newUser.setHeight(height);
+				newUser.setWeight(weight);
+				
+				dbUpdate.updateUser(newUser);
+				
+				Intent intent = new Intent(Registration.this, Home.class);
+				startActivity(intent);
+				finish();
+			}
 		}
 	};
 }
