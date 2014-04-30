@@ -34,7 +34,6 @@ public class Exercises extends Activity {
 		addButton.setOnClickListener(addClicked);
 		
 		// create table that will display exercises
-		TableLayout t1;
 		TableLayout tl = (TableLayout) findViewById(R.id.ex_table);
 		TableRow trHead = new TableRow(this);
 		trHead.setBackgroundColor(Color.WHITE);

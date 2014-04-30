@@ -38,4 +38,6 @@
 	<string name="exf_text7">Sets:</string>
 	<string name="exf_text9">Reps:</string>
 	<string name="exf_button1">Submit</string>
+	<string name="wo_text2">Workouts</string>
+	<string name="wo_buttontext1">Add New Workout</string>
 </resources>

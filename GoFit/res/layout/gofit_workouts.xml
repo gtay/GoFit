@@ -10,13 +10,13 @@
     android:paddingTop="7dp" >
 
     <TextView
-        android:id="@+id/editText1"
+        android:id="@+id/wo_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:paddingBottom="3dp"
         android:paddingLeft="10dp"
-        android:text="GoFit"
+        android:text="@string/app_name"
         android:textSize="30sp" />
 
     <View
@@ -26,189 +26,27 @@
         android:paddingTop="40dp" />
 
     <TextView
-        android:id="@+id/editText2"
+        android:id="@+id/wo_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:paddingLeft="10dp"
         android:paddingTop="15dp"
         android:paddingBottom="20dp"
-        android:text="Workouts"
+        android:text="@string/wo_text2"
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/wo_button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Today's Workout" />
+        android:text="@string/wo_buttontext1" />
 
     <TableLayout
+        android:id="@+id/workout_table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-            
-                       	<Button
-	            android:id="@+id/button5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/01/14" />
-           	
-           	<Button
-	            android:id="@+id/button6"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/02/14" />
-           	
-           	<Button
-	            android:id="@+id/button7"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/03/14" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-           	
-                       	<Button
-	            android:id="@+id/button5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/05/14" />
-           	
-           	<Button
-	            android:id="@+id/button6"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/06/14" />
-           	
-           	<Button
-	            android:id="@+id/button7"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/07/14" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-           	
-            <Button
-	            android:id="@+id/button5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/08/14" />
-           	
-           	<Button
-	            android:id="@+id/button6"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/09/14" />
-           	
-           	<Button
-	            android:id="@+id/button7"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/10/14" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-           	
-           	<Button
-	            android:id="@+id/button5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/11/14" />
-           	
-           	<Button
-	            android:id="@+id/button6"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/12/14" />
-           	
-           	<Button
-	            android:id="@+id/button7"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/13/14" />
-        </TableRow>
-                <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-           	
-           	<Button
-	            android:id="@+id/button5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/14/14" />
-           	
-           	<Button
-	            android:id="@+id/button6"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/15/14" />
-           	
-           	<Button
-	            android:id="@+id/button7"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="01/16/14" />
-        </TableRow>
     </TableLayout>
 
 </LinearLayout>

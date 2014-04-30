@@ -140,15 +140,14 @@
             android:id="@+id/home_tableRow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
-            
-           	<Button
-	            android:id="@+id/example_button4"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.15"
-	            android:paddingLeft="7dp"
-	            android:paddingRight="7dp"
-	            android:text="" />
+
+            <Button
+                android:id="@+id/example_button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp" />
            	
            	<Button
 	            android:id="@+id/example_button5"

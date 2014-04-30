@@ -29,5 +29,11 @@
 		<activity android:name="com.cmu.gofit.ExercisesForm"
          	android:label="@string/app_name">
         </activity>
+        <activity android:name="com.cmu.gofit.WorkoutLog"
+         	android:label="@string/app_name">
+        </activity>
+        <activity android:name="com.cmu.gofit.LogForm"
+         	android:label="@string/app_name">
+        </activity>
     </application>
 </manifest>
