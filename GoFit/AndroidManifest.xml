@@ -28,6 +28,9 @@
         <activity android:name="com.cmu.gofit.Home"
          	android:label="@string/app_name">
         </activity>
+        <activity android:name="com.cmu.gofit.Achievements"
+         	android:label="@string/app_name">
+        </activity>
 		<activity android:name="com.cmu.gofit.ExercisesForm"
          	android:label="@string/app_name">
         </activity>

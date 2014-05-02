@@ -62,7 +62,7 @@ public class Home extends Activity {
 	OnClickListener achievementsClicked = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			Intent intent = new Intent(Home.this, Achievement.class);
+			Intent intent = new Intent(Home.this, Achievements.class);
 			startActivity(intent);
 		}
 	};

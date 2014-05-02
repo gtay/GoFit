@@ -49,4 +49,9 @@
 	<string name="gf_text4">Goal description:</string>
 	<string name="gf_text6">Deadline:</string>
 	<string name="gf_buttontext1">Submit</string>
+	<string name="achievements_text1">Achievements</string>
+	<string name="achievements_text2">Goals completed:</string>
+	<string name="achievements_text3">Fastest time completed:</string>
+	<string name="achievements_text4">Statistics</string><string name="zero">0</string>
+	
 </resources>

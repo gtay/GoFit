@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- gofit_achievements.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/home_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:text="@string/app_name"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:paddingTop="40dp" />
+
+    <TextView
+        android:id="@+id/achievements_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:text="@string/achievements_text1"
+        android:textSize="20sp" />
+
+   <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/achievements_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="@string/achievements_text2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/num_completed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="@string/zero"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/achievements_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="@string/achievements_text3"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/fastest_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:textSize="15sp" />
+        </TableRow>
+    </TableLayout>
+    
+   <TextView
+        android:id="@+id/achievements_text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:text="@string/achievements_text4"
+        android:textSize="20sp" />
+
+</LinearLayout>

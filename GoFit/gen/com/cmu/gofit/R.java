@@ -15,9 +15,13 @@ public final class R {
         public static final int jamie=0x7f020001;
     }
     public static final class id {
+        public static final int achievements_text1=0x7f060028;
+        public static final int achievements_text2=0x7f060029;
+        public static final int achievements_text3=0x7f06002b;
+        public static final int achievements_text4=0x7f06002d;
         public static final int ex_button1=0x7f060002;
         public static final int ex_nav=0x7f060000;
-        public static final int ex_table=0x7f060003;
+        public static final int ex_table=0x7f06002e;
         public static final int ex_text1=0x7f060001;
         public static final int example_button1=0x7f06002f;
         public static final int example_button2=0x7f060030;
@@ -110,8 +114,13 @@ public final class R {
         public static final int gofit_show=0x7f030007;
         public static final int gofit_workoutlog=0x7f030008;
         public static final int gofit_workouts=0x7f030009;
+
     }
     public static final class string {
+        public static final int achievements_text1=0x7f04002b;
+        public static final int achievements_text2=0x7f04002c;
+        public static final int achievements_text3=0x7f04002d;
+        public static final int achievements_text4=0x7f04002e;
         public static final int app_name=0x7f040000;
         public static final int ex_buttontext1=0x7f040014;
         public static final int ex_text1=0x7f040010;
@@ -159,6 +168,7 @@ public final class R {
         public static final int wl_button1=0x7f04002a;
         public static final int wo_buttontext1=0x7f040025;
         public static final int wo_text2=0x7f040024;
+        public static final int zero=0x7f04002f;
     }
     public static final class style {
         public static final int CustomTheme=0x7f050000;
