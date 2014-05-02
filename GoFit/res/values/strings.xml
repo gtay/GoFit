@@ -45,4 +45,8 @@
 	<string name="lf_buttontext2">Add Audio</string>
 	<string name="lf_buttontext3">Submit</string>
 	<string name="wl_button1">Play Audio</string>
+	<string name="gf_text2">Add New Goal</string>
+	<string name="gf_text4">Goal description:</string>
+	<string name="gf_text6">Deadline:</string>
+	<string name="gf_buttontext1">Submit</string>
 </resources>

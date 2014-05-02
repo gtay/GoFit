@@ -1,15 +1,111 @@
 package com.cmu.gofit;
 
+import java.util.List;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
+import dblayout.Read;
+import dblayout.Update;
+import entities.Goal;
 
 public class Goals extends Activity {
+	
+	private List<Goal> goals;
+	private Button addNewButton;
+	private LinearLayout goalContainer;
+	private boolean create = true;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState); // call superclass's version
 		setContentView(R.layout.gofit_goals); // inflate the GUI
-	}
+		
+		goalContainer = (LinearLayout) findViewById(R.id.goal_container);
+		addNewButton = (Button) findViewById(R.id.goals_button1);
+		addNewButton.setOnClickListener(addNewClicked);
+		
+		Read dbRead = new Read();
+		goals = dbRead.getAllGoals();
+		
+		for (int i = 0; i < goals.size(); i++) {
+			final Goal g = goals.get(i);
+			LinearLayout ll = new LinearLayout(this);
+			ll.setLayoutParams(new LayoutParams(
+					LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+			ll.setOrientation(LinearLayout.VERTICAL);
+			TextView nameText = new TextView(this);
+			TextView deadlineText = new TextView(this);
+			TextView filler = new TextView(this);
+			final TextView progressText = new TextView(this);
+			SeekBar progressBar = new SeekBar(this);
+			filler.setPadding(0, 20, 0, 0);
+			nameText.setPadding(10, 0, 0, 0);
+			deadlineText.setPadding(10, 0, 0, 0);
+			progressText.setPadding(10, 0, 0, 0);
+			progressBar.setPadding(10, 0, 0, 0);
+			nameText.setText("Goal: " + g.getName());
+			deadlineText.setText("Deadline: " + g.getEndDate());
+			progressText.setText("Progress: " + g.getProgress());
+			progressBar.setMax(101);
+			progressBar.setProgress(Integer.parseInt(g.getProgress()));
+			progressBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
+				@Override
+				public void onProgressChanged(SeekBar seekBar, int progress,
+						boolean fromUser) {
+					seekBar.setProgress(progress);
+					progressText.setText("Progress: " + Integer.toString(progress));
+					Update dbUpdate = new Update();
+					g.setProgress(Integer.toString(progress));
+					dbUpdate.updateGoal(g);
+				}
+
+				@Override
+				public void onStartTrackingTouch(SeekBar seekBar) {
+				}
+
+				@Override
+				public void onStopTrackingTouch(SeekBar seekBar) {
+				}
+				
+			});
+			ll.addView(filler);
+			ll.addView(nameText);
+			ll.addView(deadlineText);
+			ll.addView(progressText);
+			ll.addView(progressBar);
+			goalContainer.addView(ll);
+		}
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		// refresh page to reflect new entry
+		if (!create) {
+			Intent intent = new Intent(Goals.this, Goals.class);
+			startActivity(intent);
+			finish();
+		} else {
+			create = false;
+		}
+	}
+	
+	OnClickListener addNewClicked = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			Intent intent = new Intent(Goals.this, GoalsForm.class);
+			startActivity(intent);
+		}
+	};
 }
