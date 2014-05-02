@@ -17,7 +17,8 @@ import entities.Workout;
 public class Workouts extends Activity {
 	
 	private static final String WORKOUT_ID = "WORKOUT_ID";
-	
+	private boolean create = true;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
@@ -62,6 +63,19 @@ public class Workouts extends Activity {
 		Button addNewButton = (Button) findViewById(R.id.wo_button1);
 		addNewButton.setOnClickListener(addNewClicked);
 
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		// refresh page to reflect new entry
+		if (!create) {
+			Intent intent = new Intent(Workouts.this, Workouts.class);
+			startActivity(intent);
+			finish();
+		} else {
+			create = false;
+		}
 	}
 	OnClickListener addNewClicked = new OnClickListener() {
 		@Override

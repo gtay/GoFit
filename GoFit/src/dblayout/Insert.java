@@ -31,7 +31,6 @@ public class Insert extends DatabaseConnector {
 		open();
 		
 		ContentValues values = new ContentValues();
-		values.put("goal_id", workout.getGoalId());
 		values.put("date", workout.getDate());
 		values.put("details", workout.getDetails());
 		values.put("image_path", workout.getImagePath());

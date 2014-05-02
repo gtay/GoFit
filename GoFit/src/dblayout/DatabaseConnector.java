@@ -58,7 +58,7 @@ public abstract class DatabaseConnector {
 	         //have to figure out how to get paths
 	         String createWorkout = "CREATE TABLE " + WORK_TABLE + 
 	 	            " (_id integer primary key autoincrement," +
-	 	            "goal_id integer, date TEXT, details TEXT," +
+	 	            "date TEXT, details TEXT," +
 	 	            "image_path TEXT, audio_file TEXT);";
 	         
 	         String createAchievement = "CREATE TABLE " + ACHIEVE_TABLE +

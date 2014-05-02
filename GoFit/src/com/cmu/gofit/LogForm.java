@@ -8,9 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,22 +18,31 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import dblayout.Insert;
+import entities.Workout;
 
 public class LogForm extends Activity {
 	
 	public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
 	public static final int MEDIA_TYPE_IMAGE = 1;
-	private Uri photoUri;
-	private String todayString;
+	
 	private static String imagePath;
 	private static String timeStamp;
+    private static String audioFilePath = null;
+
 	
-    private static final String LOG_TAG = "AudioRecordTest";
-    private static String mFileName = null;
-    
     private Button addAudioButton;
+    private Button addPhotoButton;
+    private Button submitButton;
+    private TextView detailText;
+	
+	private Uri photoUri;
+	private String todayString;
+	private boolean photoTaken = false;
+	private boolean audioTaken = false;
     private boolean mStartRecording = true;
     private MediaRecorder mRecorder = null;
 
@@ -46,10 +53,13 @@ public class LogForm extends Activity {
 		super.onCreate(savedInstanceState); // call superclass's version
 		setContentView(R.layout.gofit_logform); // inflate the GUI
 		
-		Button addPhotoButton = (Button) findViewById(R.id.lf_button1);
+		addPhotoButton = (Button) findViewById(R.id.lf_button1);
 		addPhotoButton.setOnClickListener(addPhotoClicked);
 		addAudioButton = (Button) findViewById(R.id.lf_button2);
 		addAudioButton.setOnClickListener(addAudioClicked);
+		submitButton = (Button) findViewById(R.id.lf_button3);
+		submitButton.setOnClickListener(submitClicked);
+		detailText = (TextView) findViewById(R.id.lf_text2);
 		// get today's date and convert to string
 		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 		Date today = Calendar.getInstance().getTime();
@@ -78,8 +88,42 @@ public class LogForm extends Activity {
 			} else {
 				addAudioButton.setText("Done recording!");
 				addAudioButton.setEnabled(false);
+				audioTaken = true;
 			}
 			mStartRecording = !mStartRecording;
+		}
+	};
+	
+	OnClickListener submitClicked = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			// Validate all fields are completed before submitting
+			String details = detailText.getText().toString();
+			if (details.length() <= 0) {
+				Toast.makeText(getApplicationContext(), "Put in a caption of your workout first!",
+						Toast.LENGTH_SHORT).show();
+				return;
+			}
+			if (!photoTaken) {
+	            Toast.makeText(getApplicationContext(), "Take a picture of yourself first!",
+	            		Toast.LENGTH_SHORT).show();
+	            return;
+			}
+			if (!audioTaken) {
+				Toast.makeText(getApplicationContext(), "Record some audio about your workout first!",
+						Toast.LENGTH_SHORT).show();
+				return;
+			}
+			// Add new workout object to database
+			Workout w = new Workout();
+			w.setAudioPath(audioFilePath);
+			w.setImagePath(imagePath);
+			w.setDate(todayString);
+			w.setDetails(details);
+			
+			Insert dbInsert = new Insert();
+			dbInsert.addWorkout(w);
+			finish();
 		}
 	};
 	
@@ -88,8 +132,9 @@ public class LogForm extends Activity {
 		if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
 	        if (resultCode == RESULT_OK) {
 	            // Image captured and saved to fileUri specified in the Intent
-	            Toast.makeText(this, "Image saved to:\n" +
-	                     imagePath, Toast.LENGTH_LONG).show();
+	            addPhotoButton.setEnabled(false);
+	            addPhotoButton.setText("Photo taken!");
+	            photoTaken = true;
 	        } else if (resultCode == RESULT_CANCELED) {
 	            // User cancelled the image capture
 	        } else {
@@ -152,20 +197,19 @@ public class LogForm extends Activity {
 	    }
     	
 	    timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-    	mFileName = Environment.getExternalStorageDirectory().getAbsolutePath()
+    	audioFilePath = Environment.getExternalStorageDirectory().getAbsolutePath()
     			+ File.separator + "Music" + File.separator +
     			"GoFit" + File.separator + timeStamp + ".3gp";
-    	Log.d("User", mFileName);
+    	Log.d("User", audioFilePath);
         mRecorder = new MediaRecorder();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        mRecorder.setOutputFile(mFileName);
+        mRecorder.setOutputFile(audioFilePath);
         mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 
         try {
             mRecorder.prepare();
         } catch (IOException e) {
-            Log.e(LOG_TAG, "prepare() failed");
         }
 
         mRecorder.start();

@@ -29,8 +29,8 @@
     </string>
 	<string name="reg_text3">Name:</string>	
 	<string name="reg_text5">Age:</string>
-	<string name="reg_text7">Height:</string>
-	<string name="reg_text9">Weight:</string>
+	<string name="reg_text7">Height(in.):</string>
+	<string name="reg_text9">Weight(lbs.):</string>
 	<string name="reg_buttontext">Submit</string>
 	<string name="exf_descrp">Add New Exercise</string>
 	<string name="exf_text3">Name:</string>
@@ -43,4 +43,5 @@
 	<string name="lf_descrp_hint">Enter some details about your workout here...</string>
 	<string name="lf_buttontext1">Add Photo</string>
 	<string name="lf_buttontext2">Add Audio</string>
+	<string name="lf_buttontext3">Submit</string>
 </resources>

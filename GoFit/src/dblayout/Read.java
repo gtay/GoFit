@@ -57,13 +57,11 @@ public class Read extends DatabaseConnector {
 			do {
 				workout = new Workout();
 				int id = cursor.getColumnIndex("_id");
-				int goal_id = cursor.getColumnIndex("goal_id");
 		        int date = cursor.getColumnIndex("date");
 		        int details = cursor.getColumnIndex("details");
 		        int image_path = cursor.getColumnIndex("image_path");
 		        int audio_file = cursor.getColumnIndex("audio_file");
 		        workout.setID(Integer.parseInt(cursor.getString(id)));
-				workout.setGoalId(Integer.parseInt(cursor.getString(goal_id)));
 				workout.setDate(cursor.getString(date));
 				workout.setDetails(cursor.getString(details));
 				workout.setImagePath(cursor.getString(image_path));
@@ -184,13 +182,11 @@ public class Read extends DatabaseConnector {
 		}
 		
 		Workout workout = new Workout();
-		int goal_id = cursor.getColumnIndex("goal_id");
         int date = cursor.getColumnIndex("date");
         int details = cursor.getColumnIndex("details");
         int image_path = cursor.getColumnIndex("image_path");
         int audio_file = cursor.getColumnIndex("audio_file");
         workout.setID(id);
-		workout.setGoalId(Integer.parseInt(cursor.getString(goal_id)));
 		workout.setDate(cursor.getString(date));
 		workout.setDetails(cursor.getString(details));
 		workout.setImagePath(cursor.getString(image_path));
