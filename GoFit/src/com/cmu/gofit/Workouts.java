@@ -16,7 +16,7 @@ import entities.Workout;
 
 public class Workouts extends Activity {
 	
-	private static final String WORKOUT_ID = "WORKOUT_ID";
+	public static final String WORKOUT_ID = "WORKOUT_ID";
 	private boolean create = true;
 
 	@Override

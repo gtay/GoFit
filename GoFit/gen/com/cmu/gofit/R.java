@@ -15,12 +15,7 @@ public final class R {
         public static final int jamie=0x7f020001;
     }
     public static final class id {
-        public static final int button1=0x7f060049;
-        public static final int button2=0x7f06004a;
-        public static final int button3=0x7f06004c;
         public static final int editText1=0x7f060034;
-        public static final int editText2=0x7f060048;
-        public static final int editText3=0x7f06004b;
         public static final int ex_button1=0x7f060002;
         public static final int ex_nav=0x7f060000;
         public static final int ex_table=0x7f060003;
@@ -92,10 +87,13 @@ public final class R {
         public static final int textView1=0x7f060035;
         public static final int textView2=0x7f060038;
         public static final int totalPaymentView=0x7f060046;
-        public static final int wo_button1=0x7f06004f;
-        public static final int wo_text1=0x7f06004d;
-        public static final int wo_text2=0x7f06004e;
-        public static final int workout_table=0x7f060050;
+        public static final int wl_image=0x7f06004a;
+        public static final int wl_text1=0x7f060048;
+        public static final int wl_text2=0x7f060049;
+        public static final int wo_button1=0x7f06004d;
+        public static final int wo_text1=0x7f06004b;
+        public static final int wo_text2=0x7f06004c;
+        public static final int workout_table=0x7f06004e;
     }
     public static final class layout {
         public static final int gofit_exercises=0x7f030000;
