@@ -52,7 +52,7 @@ public class Goals extends Activity {
 			nameText.setPadding(10, 0, 0, 0);
 			deadlineText.setPadding(10, 0, 0, 0);
 			progressText.setPadding(10, 0, 0, 0);
-			progressBar.setPadding(10, 0, 0, 0);
+			progressBar.setPadding(20, 0, 20, 0);
 			nameText.setText("Goal: " + g.getName());
 			deadlineText.setText("Deadline: " + g.getEndDate());
 			progressText.setText("Progress: " + g.getProgress());
