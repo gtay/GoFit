@@ -37,7 +37,7 @@ public class Exercises extends Activity {
 		TableLayout tl = (TableLayout) findViewById(R.id.ex_table);
 		TableRow trHead = new TableRow(this);
 		trHead.setBackgroundColor(Color.WHITE);
-		trHead.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+			trHead.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
 		TextView nameLabel = new TextView(this);
 		TextView weightLabel = new TextView(this);
 		TextView repsLabel = new TextView(this);
@@ -57,7 +57,7 @@ public class Exercises extends Activity {
 		trHead.addView(setsLabel);
 		trHead.addView(repsLabel);
 		tl.addView(trHead, new TableLayout.LayoutParams(
-				LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+				LayoutParams.FILL_PARENT, LayoutParams.MATCH_PARENT));
 
 		// add rows of data
 		int count = 0;
