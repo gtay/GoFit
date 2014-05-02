@@ -42,4 +42,5 @@
 	<string name="wo_buttontext1">Add New Workout</string>
 	<string name="lf_descrp_hint">Enter some details about your workout here...</string>
 	<string name="lf_buttontext1">Add Photo</string>
+	<string name="lf_buttontext2">Add Audio</string>
 </resources>
