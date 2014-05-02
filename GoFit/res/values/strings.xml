@@ -45,4 +45,8 @@
 	<string name="lf_buttontext2">Add Audio</string>
 	<string name="lf_buttontext3">Submit</string>
 	<string name="wl_button1">Play Audio</string>
+	<string name="achievements_text1">Achievements</string>
+	<string name="achievements_text2">Goals completed:</string>
+	<string name="achievements_text3">Fastest time completed:</string>
+	<string name="zero">0</string>
 </resources>
