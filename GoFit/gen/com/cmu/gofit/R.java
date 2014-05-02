@@ -15,7 +15,6 @@ public final class R {
         public static final int jamie=0x7f020001;
     }
     public static final class id {
-        public static final int editText1=0x7f060034;
         public static final int ex_button1=0x7f060002;
         public static final int ex_nav=0x7f060000;
         public static final int ex_table=0x7f060003;
@@ -64,6 +63,7 @@ public final class R {
         public static final int lf_button3=0x7f060039;
         public static final int lf_text1=0x7f060032;
         public static final int lf_text2=0x7f060033;
+        public static final int lf_text3=0x7f060034;
         public static final int monthlyPaymentView=0x7f060045;
         public static final int payoffDateView=0x7f060047;
         public static final int progressBar1=0x7f060026;
@@ -87,13 +87,17 @@ public final class R {
         public static final int textView1=0x7f060035;
         public static final int textView2=0x7f060038;
         public static final int totalPaymentView=0x7f060046;
+        public static final int wl_button1=0x7f06004e;
+        public static final int wl_filler1=0x7f06004d;
+        public static final int wl_filler2=0x7f06004b;
         public static final int wl_image=0x7f06004a;
         public static final int wl_text1=0x7f060048;
         public static final int wl_text2=0x7f060049;
-        public static final int wo_button1=0x7f06004d;
-        public static final int wo_text1=0x7f06004b;
-        public static final int wo_text2=0x7f06004c;
-        public static final int workout_table=0x7f06004e;
+        public static final int wl_text3=0x7f06004c;
+        public static final int wo_button1=0x7f060051;
+        public static final int wo_text1=0x7f06004f;
+        public static final int wo_text2=0x7f060050;
+        public static final int workout_table=0x7f060052;
     }
     public static final class layout {
         public static final int gofit_exercises=0x7f030000;
@@ -147,6 +151,7 @@ public final class R {
         public static final int reg_text5=0x7f04001a;
         public static final int reg_text7=0x7f04001b;
         public static final int reg_text9=0x7f04001c;
+        public static final int wl_button1=0x7f04002a;
         public static final int wo_buttontext1=0x7f040025;
         public static final int wo_text2=0x7f040024;
     }

@@ -59,7 +59,7 @@ public class LogForm extends Activity {
 		addAudioButton.setOnClickListener(addAudioClicked);
 		submitButton = (Button) findViewById(R.id.lf_button3);
 		submitButton.setOnClickListener(submitClicked);
-		detailText = (TextView) findViewById(R.id.lf_text2);
+		detailText = (TextView) findViewById(R.id.lf_text3);
 		// get today's date and convert to string
 		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 		Date today = Calendar.getInstance().getTime();

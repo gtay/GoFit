@@ -8,7 +8,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import dblayout.Read;
@@ -19,8 +23,12 @@ public class WorkoutLog extends Activity {
 	private TextView dateText;
 	private TextView detailText;
 	private ImageView logImage;
+	private Button playButton;
 	
+	private MediaPlayer mPlayer;
+	private Workout w;
 	private int workoutId;
+	private boolean firstPlay = true;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -29,14 +37,19 @@ public class WorkoutLog extends Activity {
 		setContentView(R.layout.gofit_workoutlog); // inflate the GUI
 		
 		dateText = (TextView) findViewById(R.id.wl_text2);
+		detailText = (TextView) findViewById(R.id.wl_text3);
 		logImage = (ImageView) findViewById(R.id.wl_image);
+		playButton = (Button) findViewById(R.id.wl_button1);
+		
+		playButton.setOnClickListener(playClicked);
 		
 		// retrieve workout based on the ID passed from intent
 		Bundle extras = getIntent().getExtras();
 		workoutId = extras.getInt(Workouts.WORKOUT_ID);
 		Read dbRead = new Read();
-		Workout w = dbRead.getWorkout(workoutId);
+		w = dbRead.getWorkout(workoutId);
 		dateText.setText("Daily Workout Log - " + w.getDate());
+		detailText.setText(w.getDetails());
 		
 		// set image
 		File imgFile = new File(w.getImagePath());
@@ -60,5 +73,31 @@ public class WorkoutLog extends Activity {
 		}
 		
 	}
+	OnClickListener playClicked = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+            if (firstPlay) {
+            	startPlaying();
+            } else {
+            	stopPlaying();
+            	startPlaying();
+            }
+		}
+	};
+	
+    private void stopPlaying() {
+        mPlayer.release();
+        mPlayer = null;
+    }
+
+    private void startPlaying() {
+        mPlayer = new MediaPlayer();
+        try {
+            mPlayer.setDataSource(w.getAudioPath());
+            mPlayer.prepare();
+            mPlayer.start();
+        } catch (IOException e) {
+        }
+    }
 
 }

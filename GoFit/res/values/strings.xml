@@ -44,4 +44,5 @@
 	<string name="lf_buttontext1">Add Photo</string>
 	<string name="lf_buttontext2">Add Audio</string>
 	<string name="lf_buttontext3">Submit</string>
+	<string name="wl_button1">Play Audio</string>
 </resources>
