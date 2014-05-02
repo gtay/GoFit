@@ -48,5 +48,6 @@
 	<string name="achievements_text1">Achievements</string>
 	<string name="achievements_text2">Goals completed:</string>
 	<string name="achievements_text3">Fastest time completed:</string>
-	<string name="zero">0</string>
+	<string name="achievements_text4">Statistics</string><string name="zero">0</string>
+	
 </resources>
