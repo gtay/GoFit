@@ -1,5 +1,9 @@
 package com.cmu.gofit;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import android.app.Activity;
@@ -7,6 +11,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -80,6 +85,36 @@ public class Goals extends Activity {
 							public void onClick(DialogInterface dialog, int which) {
 								Achievement a = dbRead.getAcheivements();
 								int num_completed = Integer.parseInt(a.getNumCompleted()) + 1;
+								String completed = a.getFastestTime();
+								if (!completed.matches("-?\\d+(\\.\\d+)?")) {
+									completed = "9999";
+								}
+								DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+								Date today = Calendar.getInstance().getTime();
+								String todayString = df.format(today);
+								Date start_date = null;
+								Date end_date = null;
+								String start = g.getStartDate();
+								
+								try {
+									start_date = df.parse(start);
+									end_date = df.parse(todayString);
+									long diff = end_date.getTime() - start_date.getTime();
+									int one_day = (1000*60*60*24);
+									int days = (int) diff / one_day;
+									if (days < Integer.parseInt(completed)) {
+										completed = Integer.toString(days);
+									} else {
+										completed = "None";
+									}									
+								} catch (Exception e) {
+									e.printStackTrace();
+									Log.d(start, "date is not in correct format");
+								}
+								if (completed.equals("9999")) {
+									completed = "None";
+								}
+								a.setFastestTime(completed);
 								a.setNumCompleted(Integer.toString(num_completed));
 								Update dbUpdate = new Update();
 								dbUpdate.updateAchievements(a);
