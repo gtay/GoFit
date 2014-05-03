@@ -1,20 +1,30 @@
 package com.cmu.gofit;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
+import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import dblayout.Delete;
 import dblayout.Read;
 import dblayout.Update;
+import entities.Achievement;
 import entities.Goal;
 
 public class Goals extends Activity {
@@ -34,7 +44,7 @@ public class Goals extends Activity {
 		addNewButton = (Button) findViewById(R.id.goals_button1);
 		addNewButton.setOnClickListener(addNewClicked);
 		
-		Read dbRead = new Read();
+		final Read dbRead = new Read();
 		goals = dbRead.getAllGoals();
 		
 		for (int i = 0; i < goals.size(); i++) {
@@ -65,9 +75,66 @@ public class Goals extends Activity {
 						boolean fromUser) {
 					seekBar.setProgress(progress);
 					progressText.setText("Progress: " + Integer.toString(progress));
-					Update dbUpdate = new Update();
-					g.setProgress(Integer.toString(progress));
-					dbUpdate.updateGoal(g);
+					if (progress == 100) {
+						AlertDialog.Builder builder1 = new AlertDialog.Builder(Goals.this);
+						builder1.setTitle("Confirm completion");
+						builder1.setMessage("Have you completed this goal?");
+						builder1.setCancelable(true);
+						builder1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {							
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								Achievement a = dbRead.getAcheivements();
+								int num_completed = Integer.parseInt(a.getNumCompleted()) + 1;
+								String completed = a.getFastestTime();
+								if (!completed.matches("-?\\d+(\\.\\d+)?")) {
+									completed = "9999";
+								}
+								DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+								Date today = Calendar.getInstance().getTime();
+								String todayString = df.format(today);
+								Date start_date = null;
+								Date end_date = null;
+								String start = g.getStartDate();
+								
+								try {
+									start_date = df.parse(start);
+									end_date = df.parse(todayString);
+									long diff = end_date.getTime() - start_date.getTime();
+									int one_day = (1000*60*60*24);
+									int days = (int) diff / one_day;
+									if (days < Integer.parseInt(completed)) {
+										completed = Integer.toString(days);
+									} else {
+										completed = "None";
+									}									
+								} catch (Exception e) {
+									e.printStackTrace();
+									Log.d(start, "date is not in correct format");
+								}
+								if (completed.equals("9999")) {
+									completed = "None";
+								}
+								a.setFastestTime(completed);
+								a.setNumCompleted(Integer.toString(num_completed));
+								Update dbUpdate = new Update();
+								dbUpdate.updateAchievements(a);
+								Delete dbDelete = new Delete();
+								dbDelete.deleteGoalById(g.getID());
+								Toast.makeText(getApplicationContext(), "Goal has been completed and removed", Toast.LENGTH_SHORT).show();
+							}
+						});
+						builder1.setNegativeButton("No", new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int which) {
+								dialog.cancel();
+							}
+						});
+						AlertDialog alert = builder1.create();
+						alert.show();
+					} else {
+						Update dbUpdate = new Update();
+						g.setProgress(Integer.toString(progress));
+						dbUpdate.updateGoal(g);
+					}
 				}
 
 				@Override

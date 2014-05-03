@@ -53,7 +53,7 @@ public abstract class DatabaseConnector {
 	         
 	         String createGoal = "CREATE TABLE " + GOAL_TABLE + 
 	 	            " (_id integer primary key autoincrement," +
-	 	            "name TEXT, end_date TEXT, progress TEXT);";
+	 	            "name TEXT, start_date TEXT, end_date TEXT, progress TEXT);";
 	         
 	         //have to figure out how to get paths
 	         String createWorkout = "CREATE TABLE " + WORK_TABLE + 

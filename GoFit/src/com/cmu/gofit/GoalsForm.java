@@ -1,5 +1,10 @@
 package com.cmu.gofit;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,11 +48,23 @@ public class GoalsForm extends Activity {
 			if (deadline.length() <= 0) {
 				Toast.makeText(getApplicationContext(),
 						"Enter a deadline first!", Toast.LENGTH_SHORT).show();
+				return;
+			}
+			if (!(deadline.split("/").length == 3)) {
+				Toast.makeText(getApplicationContext(), "Deadline format should be MM/DD/YYY", Toast.LENGTH_SHORT).show();
+				return;
 			}
 			Insert dbInsert = new Insert();
+			
+			// get today's date and convert to string
+			DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+			Date today = Calendar.getInstance().getTime();
+			String todayString = df.format(today);
+			
 			Goal g = new Goal();
 			g.setProgress("0");
 			g.setName(goal);
+			g.setStartDate(todayString);
 			g.setEndDate(deadline);
 			dbInsert.addGoal(g);
 			finish();
