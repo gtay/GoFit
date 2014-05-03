@@ -7,10 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import dblayout.Read;
 import entities.Goal;
@@ -21,9 +23,11 @@ public class Home extends Activity {
 	
 	private static final int MAX_NUM_GOALS = 3;
 	private static final int MAX_NUM_WORKOUTS = 6;
+	protected static final String WORKOUT_ID = null;
 	
 	TextView welcomeMessage;
 	LinearLayout goalsContainer;
+	TableLayout workoutTable;
 	private boolean create = true;
 	
 	@Override
@@ -33,6 +37,7 @@ public class Home extends Activity {
 		setContentView(R.layout.gofit_home); // inflate the GUI
 		
 		goalsContainer = (LinearLayout) findViewById(R.id.home_goals);
+		workoutTable = (TableLayout) findViewById(R.id.home_workouts);
 
 		Button exercisesButton = (Button) findViewById(R.id.home_button1);
 		exercisesButton.setOnClickListener(exercisesClicked);		
@@ -55,6 +60,12 @@ public class Home extends Activity {
 		welcomeMessage.setText("Welcome, "+userName+"!");
 		
 		// Set recent goals
+		if (goals.size() == 0) {
+			TextView noGoals = new TextView(this);
+			noGoals.setText("No current goals in progress!");
+			noGoals.setPadding(15, 0, 0, 0);
+			goalsContainer.addView(noGoals);
+		}
 		int count = 0;
 		for (int i = goals.size() - 1; i >= 0; i--) {
 			if (count >= MAX_NUM_GOALS) {
@@ -70,7 +81,46 @@ public class Home extends Activity {
 				goalBar.setPadding(15, 5, 15, 0);
 				goalsContainer.addView(goalText);
 				goalsContainer.addView(goalBar);
+				count++;
 			}
+		}
+		
+		// Set recent workouts
+		if (workouts.size() == 0) {
+			TextView noWorkouts = new TextView(this);
+			noWorkouts.setText("No workouts saved yet :(");
+			noWorkouts.setPadding(15, 0, 0, 0);
+			workoutTable.addView(noWorkouts);
+		}
+		count = 0;
+		for (int i = workouts.size() - 1; i >= 0; i = i - 3) {
+			TableRow tr = new TableRow(this);
+			tr.setLayoutParams(new LayoutParams(
+					LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+			for (int j = 0; j < 3; j++) {
+				int index = i-j;
+				if (index < 0) {
+					break;
+				}
+				final Workout w = workouts.get(index);
+				// add button corresponding to workout
+				Button b = new Button(this);
+				OnClickListener bClicked = new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						Intent intent = new Intent(Home.this, WorkoutLog.class);
+						intent.putExtra(WORKOUT_ID, w.getID());
+						startActivity(intent);
+					}
+				};
+				b.setOnClickListener(bClicked);
+				b.setText(w.getDate());
+				tr.addView(b);
+			}
+			// add assembled row to tablelayout
+			workoutTable.addView(tr, new TableLayout.LayoutParams(
+					LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+			
 		}
 	}
 	

@@ -66,7 +66,7 @@ public class Goals extends Activity {
 			nameText.setText("Goal: " + g.getName());
 			deadlineText.setText("Deadline: " + g.getEndDate());
 			progressText.setText("Progress: " + g.getProgress());
-			progressBar.setMax(101);
+			progressBar.setMax(100);
 			progressBar.setProgress(Integer.parseInt(g.getProgress()));
 			progressBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
