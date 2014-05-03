@@ -84,15 +84,6 @@
                 android:textSize="15sp" />
         </TableRow>
     </TableLayout>
-    
-   <TextView
-        android:id="@+id/achievements_text4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:paddingLeft="10dp"
-        android:paddingTop="15dp"
-        android:text="@string/achievements_text4"
-        android:textSize="20sp" />
+
 
 </LinearLayout>
