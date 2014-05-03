@@ -13,6 +13,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
+import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import dblayout.Delete;
@@ -84,6 +85,7 @@ public class Goals extends Activity {
 								dbUpdate.updateAchievements(a);
 								Delete dbDelete = new Delete();
 								dbDelete.deleteGoalById(g.getID());
+								Toast.makeText(getApplicationContext(), "Goal has been completed and removed", Toast.LENGTH_SHORT).show();
 							}
 						});
 						builder1.setNegativeButton("No", new DialogInterface.OnClickListener() {
