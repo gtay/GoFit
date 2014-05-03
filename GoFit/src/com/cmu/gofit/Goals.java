@@ -3,6 +3,8 @@ package com.cmu.gofit;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import dblayout.Delete;
 import dblayout.Read;
 import dblayout.Update;
+import entities.Achievement;
 import entities.Goal;
 
 public class Goals extends Activity {
@@ -34,7 +38,7 @@ public class Goals extends Activity {
 		addNewButton = (Button) findViewById(R.id.goals_button1);
 		addNewButton.setOnClickListener(addNewClicked);
 		
-		Read dbRead = new Read();
+		final Read dbRead = new Read();
 		goals = dbRead.getAllGoals();
 		
 		for (int i = 0; i < goals.size(); i++) {
@@ -65,9 +69,35 @@ public class Goals extends Activity {
 						boolean fromUser) {
 					seekBar.setProgress(progress);
 					progressText.setText("Progress: " + Integer.toString(progress));
-					Update dbUpdate = new Update();
-					g.setProgress(Integer.toString(progress));
-					dbUpdate.updateGoal(g);
+					if (progress == 100) {
+						AlertDialog.Builder builder1 = new AlertDialog.Builder(Goals.this);
+						builder1.setTitle("Confirm completion");
+						builder1.setMessage("Have you completed this goal?");
+						builder1.setCancelable(true);
+						builder1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {							
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								Achievement a = dbRead.getAcheivements();
+								int num_completed = Integer.parseInt(a.getNumCompleted()) + 1;
+								a.setNumCompleted(Integer.toString(num_completed));
+								Update dbUpdate = new Update();
+								dbUpdate.updateAchievements(a);
+								Delete dbDelete = new Delete();
+								dbDelete.deleteGoalById(g.getID());
+							}
+						});
+						builder1.setNegativeButton("No", new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int which) {
+								dialog.cancel();
+							}
+						});
+						AlertDialog alert = builder1.create();
+						alert.show();
+					} else {
+						Update dbUpdate = new Update();
+						g.setProgress(Integer.toString(progress));
+						dbUpdate.updateGoal(g);
+					}
 				}
 
 				@Override
