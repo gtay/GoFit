@@ -46,7 +46,7 @@ public class WorkoutLog extends Activity {
 		
 		// retrieve workout based on the ID passed from intent
 		Bundle extras = getIntent().getExtras();
-		workoutId = extras.getInt(Home.WORKOUT_ID);
+		workoutId = extras.getInt(Workouts.WORKOUT_ID);
 		Read dbRead = new Read();
 		Log.d("user", Integer.toString(workoutId));
 		w = dbRead.getWorkout(workoutId);

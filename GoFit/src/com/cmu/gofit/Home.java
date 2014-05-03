@@ -23,7 +23,6 @@ public class Home extends Activity {
 	
 	private static final int MAX_NUM_GOALS = 3;
 	private static final int MAX_NUM_WORKOUTS = 6;
-	protected static final String WORKOUT_ID = null;
 	
 	TextView welcomeMessage;
 	LinearLayout goalsContainer;
@@ -116,7 +115,7 @@ public class Home extends Activity {
 					@Override
 					public void onClick(View v) {
 						Intent intent = new Intent(Home.this, WorkoutLog.class);
-						intent.putExtra(WORKOUT_ID, w.getID());
+						intent.putExtra(Workouts.WORKOUT_ID, w.getID());
 						startActivity(intent);
 					}
 				};

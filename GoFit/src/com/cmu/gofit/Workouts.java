@@ -47,7 +47,7 @@ public class Workouts extends Activity {
 					@Override
 					public void onClick(View v) {
 						Intent intent = new Intent(Workouts.this, WorkoutLog.class);
-						intent.putExtra(WORKOUT_ID, w.getID());
+						intent.putExtra(Workouts.WORKOUT_ID, w.getID());
 						startActivity(intent);
 					}
 				};
