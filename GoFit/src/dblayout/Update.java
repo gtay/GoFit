@@ -37,6 +37,7 @@ public class Update extends DatabaseConnector {
 		
 		ContentValues values = new ContentValues();
 		values.put("name", goal.getName());
+		values.put("start_date", goal.getStartDate());
 		values.put("end_date", goal.getEndDate());
 		values.put("progress", goal.getProgress());
 		

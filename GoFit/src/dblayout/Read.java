@@ -25,10 +25,12 @@ public class Read extends DatabaseConnector {
 				goal = new Goal();
 				int id = cursor.getColumnIndex("_id");
 				int name = cursor.getColumnIndex("name");
+				int start_date = cursor.getColumnIndex("start_date");
 		        int end_date = cursor.getColumnIndex("end_date");
 		        int progress = cursor.getColumnIndex("progress");
 		        goal.setID(Integer.parseInt(cursor.getString(id)));
 				goal.setName(cursor.getString(name));
+				goal.setStartDate(cursor.getString(start_date));
 				goal.setEndDate(cursor.getString(end_date));
 				goal.setProgress(cursor.getString(progress));
 		        

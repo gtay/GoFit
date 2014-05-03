@@ -3,6 +3,7 @@ package entities;
 public class Goal {
 	private int id;
 	private String name;
+	private String start_date;
 	private String end_date;
 	private String progress;
 	
@@ -12,6 +13,10 @@ public class Goal {
 	
 	public String getName() {
 		return name;
+	}
+	
+	public String getStartDate() {
+		return start_date;
 	}
 	
 	public String getEndDate() {
@@ -24,6 +29,10 @@ public class Goal {
 	
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public void setStartDate(String start_date) {
+		this.start_date = start_date;
 	}
 	
 	public void setEndDate(String end_date) {
