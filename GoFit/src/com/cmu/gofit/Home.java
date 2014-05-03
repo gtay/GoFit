@@ -92,12 +92,19 @@ public class Home extends Activity {
 			noWorkouts.setPadding(15, 0, 0, 0);
 			workoutTable.addView(noWorkouts);
 		}
+		
 		count = 0;
 		for (int i = workouts.size() - 1; i >= 0; i = i - 3) {
+			if (count >= MAX_NUM_WORKOUTS) {
+				break;
+			}
 			TableRow tr = new TableRow(this);
 			tr.setLayoutParams(new LayoutParams(
 					LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
 			for (int j = 0; j < 3; j++) {
+				if (count >= MAX_NUM_WORKOUTS) {
+					break;
+				}
 				int index = i-j;
 				if (index < 0) {
 					break;
@@ -114,8 +121,10 @@ public class Home extends Activity {
 					}
 				};
 				b.setOnClickListener(bClicked);
-				b.setText(w.getDate());
+				b.setText(w.getID());
+				
 				tr.addView(b);
+				count++;
 			}
 			// add assembled row to tablelayout
 			workoutTable.addView(tr, new TableLayout.LayoutParams(
