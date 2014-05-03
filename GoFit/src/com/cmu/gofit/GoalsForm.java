@@ -43,6 +43,11 @@ public class GoalsForm extends Activity {
 			if (deadline.length() <= 0) {
 				Toast.makeText(getApplicationContext(),
 						"Enter a deadline first!", Toast.LENGTH_SHORT).show();
+				return;
+			}
+			if (!(deadline.split("/").length == 3)) {
+				Toast.makeText(getApplicationContext(), "Deadline format should be MM/DD/YYY", Toast.LENGTH_SHORT).show();
+				return;
 			}
 			Insert dbInsert = new Insert();
 			Goal g = new Goal();
