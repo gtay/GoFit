@@ -121,7 +121,7 @@ public class Home extends Activity {
 					}
 				};
 				b.setOnClickListener(bClicked);
-				b.setText(w.getID());
+				b.setText(w.getDate());
 				
 				tr.addView(b);
 				count++;

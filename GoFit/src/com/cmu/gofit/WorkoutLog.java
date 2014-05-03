@@ -10,6 +10,7 @@ import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -45,8 +46,9 @@ public class WorkoutLog extends Activity {
 		
 		// retrieve workout based on the ID passed from intent
 		Bundle extras = getIntent().getExtras();
-		workoutId = extras.getInt(Workouts.WORKOUT_ID);
+		workoutId = extras.getInt(Home.WORKOUT_ID);
 		Read dbRead = new Read();
+		Log.d("user", Integer.toString(workoutId));
 		w = dbRead.getWorkout(workoutId);
 		dateText.setText("Daily Workout Log - " + w.getDate());
 		detailText.setText(w.getDetails());
